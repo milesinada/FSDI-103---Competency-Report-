@@ -1,0 +1,321 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+:root{
+    --primary:#ffe100;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: "Roboto", sans-serif ;
+}
+h3{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+h4{
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+a{
+    text-decoration: none;
+}
+p a{
+    color: white;
+}
+p a:hover{
+    text-decoration: underline;
+}
+h3 a{
+    color: white;
+}
+h3 a:hover{
+    text-decoration: underline;
+}
+h4 a{
+    color: grey;
+}
+h4 a:hover{
+   text-decoration: underline;
+}
+img{
+    max-width: 100%;
+}
+/*utilities*/
+.read-btn{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.big{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.light{
+    font-weight: 450;
+    letter-spacing: 1.5px;
+}
+/*menu*/
+nav{
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img.big-logo{
+    height: 40px;
+    padding-top: 5px;
+    display: none; /*hide element*/
+}
+img.small-logo{
+    height: 35px;
+    padding: 5px;
+    padding-left: 20px;
+}
+.menu-item,
+.renew-item,
+.search-item {
+    display: none;
+}
+@media(min-width:992px){
+    .menu-item,
+    .renew-item,
+    .search-item {
+        display: inline-block;
+    }
+    img.big-logo{
+        display: block;
+    }
+    img.small-logo{
+        display:none;
+    }
+}
+
+/*nav menu*/
+.login-item,
+.menu-item {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: black;
+    margin-right: 0.5rem;
+}
+.search-item,
+.arrows-item {
+    color: black;
+}
+.renew-item {
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary);
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, white 50%, var(--primary) 50%);
+    transition: .1s ease-in-out, color .1s ease-in-out;
+}
+.renew-item:hover{
+    background-color: var(--primary);
+    color: black;
+    background-position: 0% 100%;
+}
+
+/*header*/
+header{
+    padding-top: 25px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.subs-text{
+    color: white;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, black 50%, #ffe100 50%);
+    transition: .1s ease-in-out, color .1s ease-in-out;
+}
+.subs-text:hover{
+    background-color: var(--primary);
+    color: black;
+    background-position: 0% 100%;
+}
+.header-div{
+    background-color: var(--primary);
+    padding: 2px;
+    width: 35px;
+    position: relative;
+    left: 50%;
+    margin-top: 30px;
+}
+span{
+    border-bottom: var(--primary) solid 2px;
+}
+
+.search-item,.arrows-item{
+    margin-right: 1rem;
+    color: black;
+}
+.renew-item{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary);;
+}
+.subs-item{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(to left, black 50%, #ffe100 50%) right;
+    background-size: 200%;
+    transition: .3s ease-out;
+}
+.subs-item:hover{
+    background-color: var(--primary);
+    color: black;
+    background-position: left;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*main-news*/
+.main-news-item{
+    position: relative; /*parent*/
+    margin: 10px auto;  
+    width: 95%;
+}
+.main-news-text{
+    position: absolute; /*child*/
+    bottom: 2rem;
+    left: 2rem;
+}
+.main-news-text h3{
+    position: inherit;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+.main-news-text p {
+    font-size: 2rem;
+    font-weight: 900;
+}
+.main-news-text a{
+    margin-left: 1rem;
+}
+.secondary-news-item{
+    width: 95%;
+    margin: 10px auto;
+}
+.secondary-news-img{
+    height: 400px;
+    width: 100%;
+}
+.secondary-news-text{
+    background-color: white;
+    color: black;
+    margin-top: -16px;
+    height: 120px;
+    padding: 10px;
+}
+.secondary-news-text .read-btn{
+    color: black;
+}
+.secondary-news-text h3{
+    color: grey;
+}
+.secondary-news-text p{
+    font-size: 18px;
+    font-weight: 700;
+    word-spacing: 2px;
+}
+.todays-picks-title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    border-left: 5px solid var(--primary);
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.todays-picks-item{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 10px auto;
+}
+.todays-picks-item img{
+    width: 8rem;
+    height: 7.2rem;
+}
+.todays-picks-text{
+    margin-left: 10px;
+    width: 90%;
+}
+.see-more{
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left:10px;
+    border-bottom:solid 2px var(--primary) ;
+    color: white;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, black 50%, #ffe100 50%);
+    transition: .1s ease-in-out, color .1s ease-in-out;
+}
+.see-more:hover{
+    background-color: var(--primary);
+    color: black;
+    background-position: 0% 100%;
+}
+@media(min-width:768px){
+    .secondary-news-item{
+        margin: 1rem;
+    }
+    .secondary-news-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .secondary-news-text{
+        height: 10rem;
+    }
+}
+@media (min-width:992px){
+    main{
+        display:flex;
+        flex-direction: row-reverse;
+       justify-content: center;
+    }
+    .main-news-item{
+        position: relative;
+        width:40rem;
+    }
+    .main-news-text{
+        position: absolute;
+        bottom: 1rem;
+    }
+    .secondary-news-item{
+        width:19rem;
+    }
+    .todays-picks-container{
+    width:25rem;
+    }
+    .secondary-news-item img{
+        height: 15rem;
+        width: 19rem;
+    }
+    .secondary-news-container{
+        display: flex;
+    }
+    .secondary-news-text{
+        height: 150px;
+    }
+}
